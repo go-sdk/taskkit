@@ -71,8 +71,8 @@ github.com/go-redis/redis/v8 v8.11.5 h1:AcZZR7igkdvfVmQTPnu9WE37LRrO/YrBH5zWyjDC
 github.com/go-redis/redis/v8 v8.11.5/go.mod h1:gREzHqY1hg6oD9ngVRbLStwAWKhA0FEgq8Jd4h5lpwo=
 github.com/go-redsync/redsync/v4 v4.18.0 h1:DDM09PEhmNTf/vziolf2x6391y1hHxF5vQ4ytHl9xQc=
 github.com/go-redsync/redsync/v4 v4.18.0/go.mod h1:yuoqcQ55FS1VypSeVTMqFsJqTdWpEH5eA4MQGKJ9c4M=
-github.com/go-sdk/core v1.6.0 h1:YAJCXX+bLRf87Ev+2siN32fsKDqPtfK3uXg3Y+H9ODc=
-github.com/go-sdk/core v1.6.0/go.mod h1:OXgs/9i8lumg0vy8Cuz929CD24XNT6uNt7drKeZI6cs=
+github.com/go-sdk/core v1.6.1 h1:eUzZMVrJvOtkaFVtGrB8siV6X3VyeN2NaZwP0wpjDOQ=
+github.com/go-sdk/core v1.6.1/go.mod h1:OXgs/9i8lumg0vy8Cuz929CD24XNT6uNt7drKeZI6cs=
 github.com/go-viper/mapstructure/v2 v2.5.0 h1:vM5IJoUAy3d7zRSVtIwQgBj7BiWtMPfmPEgAXnvj1Ro=
 github.com/go-viper/mapstructure/v2 v2.5.0/go.mod h1:oJDH3BJKyqBA2TXFhDsKDGDTlndYOZ6rGS0BRZIxGhM=
 github.com/gogo/protobuf v1.3.2 h1:Ov1cvc58UF3b5XjBnZv7+opcTcQFZebYjWzi34vdm4Q=
