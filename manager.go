@@ -52,8 +52,10 @@ func NewManager(options ...ManagerOption) (*Manager, error) {
 
 	schedulerOptions := []gocron.SchedulerOption{
 		gocron.WithLocation(config.location),
-		gocron.WithLogger(schedulerLogger{}),
 		gocron.WithStopTimeout(config.shutdownTimeout),
+	}
+	if schedulerLogEnabled() {
+		schedulerOptions = append(schedulerOptions, gocron.WithLogger(schedulerLogger{}))
 	}
 	if config.locker != nil {
 		schedulerOptions = append(schedulerOptions, gocron.WithDistributedLocker(config.locker))

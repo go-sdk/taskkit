@@ -12,7 +12,7 @@ taskkit/
 ├── context.go             任务执行 Context 和元数据
 ├── error.go               公共哨兵错误
 ├── job.go                 Task、Job 快照、状态和执行包装
-├── logger.go              gocron 到 core/logx 的日志适配
+├── logger.go              按环境变量启用的 gocron 到 core/logx 日志适配
 ├── manager.go             动态任务注册和生命周期
 ├── options.go             Manager 和 Job 配置
 ├── parallel.go            固定 worker 数的泛型并发执行器
@@ -29,7 +29,7 @@ taskkit/
 
 ```text
 NewManager
-    -> 应用时区、日志、关闭超时和可选 Locker
+    -> 应用时区、关闭超时、可选 gocron 日志和 Locker
     -> 创建并立即启动 gocron Scheduler
     -> lifex.OnDeinit(Manager.Shutdown)
 
@@ -56,6 +56,8 @@ gocron job context
 ```
 
 `Context` 嵌入标准 `context.Context`。业务继续向数据库、HTTP 客户端或 `Parallel` 传递它时，取消信号和任务元数据都会保留。
+
+gocron 调度器自身的内部日志默认关闭。创建 Manager 前将 `TASKKIT_GOCRON_LOG` 设置为 `1`、`t`、`true`、`y`、`yes` 或 `on`（忽略大小写）时，内部日志通过 `core/logx` 输出；任务开始、完成、失败、panic 和分布式锁失败日志不受该开关影响。
 
 ## 并发执行链路
 

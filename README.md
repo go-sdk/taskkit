@@ -39,6 +39,8 @@ if err != nil {
 
 `NewManager` 返回前已经启动调度器，之后新增或更新的任务立即生效。Manager 自动注册到 `core/lifex`，正常使用 `lifex.Wait` 的程序不需要单独关闭；独立使用时也可以显式调用 `Shutdown`。
 
+gocron 调度器自身的内部日志默认关闭。需要排查调度器问题时，可以在创建 Manager 前将 `TASKKIT_GOCRON_LOG` 设置为 `1`、`t`、`true`、`y`、`yes` 或 `on`（忽略大小写），将内部日志接入 `core/logx`。该开关不影响任务开始、完成、失败、panic 和分布式锁失败日志。
+
 支持三类调度：
 
 ```go

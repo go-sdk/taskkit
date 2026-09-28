@@ -1,6 +1,21 @@
 package taskkit
 
-import "github.com/go-sdk/core/logx"
+import (
+	"os"
+	"strings"
+
+	"github.com/go-sdk/core/logx"
+)
+
+const schedulerLogEnvironment = "TASKKIT_GOCRON_LOG"
+
+func schedulerLogEnabled() bool {
+	switch strings.ToLower(os.Getenv(schedulerLogEnvironment)) {
+	case "1", "t", "true", "y", "yes", "on":
+		return true
+	}
+	return false
+}
 
 type schedulerLogger struct{}
 
