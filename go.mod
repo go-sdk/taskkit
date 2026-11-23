@@ -4,7 +4,7 @@ go 1.27.0
 
 require (
 	github.com/go-co-op/gocron-redis-lock/v2 v2.2.1
-	github.com/go-co-op/gocron/v2 v2.23.1
+	github.com/go-co-op/gocron/v2 v2.23.2
 	github.com/go-sdk/core v1.6.9
 	github.com/google/uuid v1.6.0
 	github.com/redis/go-redis/v9 v9.23.0
