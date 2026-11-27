@@ -7,7 +7,7 @@ require (
 	github.com/go-co-op/gocron/v2 v2.23.1
 	github.com/go-sdk/core v1.6.9
 	github.com/google/uuid v1.6.0
-	github.com/redis/go-redis/v9 v9.23.0
+	github.com/redis/go-redis/v9 v9.24.0
 	github.com/robfig/cron/v3 v3.0.1
 )
 
